@@ -3,12 +3,14 @@ extends RigidBody2D
 var radius: float
 var velocity: Vector2
 var maturity: float
+var brain = load("res://brain.gd").new()
 
 func _ready():
 	mass = randf_range(0.2, 1.0)**2 * 1000
 	radius = mass
 	velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized() * mass
 	maturity = 2
+	print(brain.predict([1]))
 
 func _process(delta):
 	# mature

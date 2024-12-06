@@ -7,7 +7,6 @@ var spawn_timer: float = 0.0
 func _ready():
 	# Load the Circle scene
 	circle_scene = preload("res://circle.tscn")
-	pass
 
 func _process(delta):
 	spawn_timer -= delta
