@@ -31,3 +31,4 @@ func handle_collision(body, angle):
 		body.queue_free()  # Remove the lighter circle
 	elif mass < body.mass:
 		queue_free()  # Remove this circle if it is lighter
+	get_parent().spawn_circle()
